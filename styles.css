@@ -14,3 +14,27 @@ img {
 .car-container {
   width: 15%;
 }
+
+.ArrowLeft {
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.ArrowRight {
+  transform: rotate(0deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.ArrowUp {
+  transform: rotate(270deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.ArrowDown {
+  transform: rotate(90deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
