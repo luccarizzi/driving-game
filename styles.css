@@ -15,25 +15,25 @@ img {
   width: 15%;
 }
 
-.left {
+.ArrowLeft {
   transform: rotate(180deg);
   transition-duration: 0.5s;
   transition-property: transform;
 }
 
-.right {
+.ArrowRight {
   transform: rotate(0deg);
   transition-duration: 0.5s;
   transition-property: transform;
 }
 
-.up {
+.ArrowUp {
   transform: rotate(270deg);
   transition-duration: 0.5s;
   transition-property: transform;
 }
 
-.down {
+.ArrowDown {
   transform: rotate(90deg);
   transition-duration: 0.5s;
   transition-property: transform;
