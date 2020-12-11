@@ -6,3 +6,11 @@
 body {
   background-color: #288d26;
 }
+
+img {
+  width: 100%;
+}
+
+.car-container {
+  width: 15%;
+}
