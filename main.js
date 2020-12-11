@@ -1,5 +1,5 @@
 var car = {
-  direction: 'east'
+  direction: ''
 };
 
 var keyDirection = [
