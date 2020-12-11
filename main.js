@@ -23,4 +23,8 @@ document.addEventListener('keydown', function (e) {
     }
   }
   $img.className = car.direction;
+
+  if (e.key === ' ') {
+
+  }
 });
