@@ -1,7 +1,18 @@
 var car = {
-  direction: "east"
-}
+  direction: 'east'
+};
 
-document.addEventListener("keydown", function(e) {
-  console.log(e.key);
-})
+var keyDirection = [
+  'ArrowDown',
+  'ArrowUp',
+  'ArrowLeft',
+  'ArrowRight'
+];
+
+document.addEventListener('keydown', function (e) {
+  for (var i = 0; i < keyDirection.length; i++) {
+    if (e.key === keyDirection[i]) {
+      car.direction = keyDirection[i];
+    }
+  }
+});
