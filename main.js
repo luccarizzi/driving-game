@@ -1,6 +1,10 @@
 
 var car = {
-  direction: ''
+  direction: '',
+  location: {
+    x: '',
+    y: ''
+  }
 };
 
 var keyDirection = [
