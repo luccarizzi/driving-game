@@ -1,6 +1,10 @@
 
 var car = {
-  direction: ''
+  direction: '',
+  location: {
+    x: 0,
+    y: 0
+  }
 };
 
 var keyDirection = [
@@ -11,6 +15,8 @@ var keyDirection = [
 ];
 
 var $img = document.querySelector('img');
+var engine = null;
+var startStop = 0;
 
 document.addEventListener('keydown', function (e) {
   for (var i = 0; i < keyDirection.length; i++) {
@@ -19,4 +25,17 @@ document.addEventListener('keydown', function (e) {
     }
   }
   $img.className = car.direction;
+  if (e.key === ' ') {
+    if (startStop % 2 === 0) {
+      engine = setInterval(moveCar, 1);
+    } else {
+      clearInterval(engine);
+    }
+    startStop++;
+  }
 });
+
+function moveCar() {
+  car.location.x++;
+  $img.setAttribute('style', 'left: ' + car.location.x + 'px;');
+}
