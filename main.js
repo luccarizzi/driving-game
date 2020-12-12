@@ -3,8 +3,8 @@ var left = 0;
 var car = {
   direction: '',
   location: {
-    x: '',
-    y: ''
+    x: 0,
+    y: 0
   }
 };
 
@@ -26,11 +26,12 @@ document.addEventListener('keydown', function (e) {
   $img.className = car.direction;
 
   if (e.key === ' ') {
-    setInterval(moveCar, 4);
+    setInterval(moveCar, 1);
   }
 });
 
 function moveCar() {
   left++;
+  car.location.x = left;
   $img.setAttribute('style', 'left: ' + left + 'px;');
 }
