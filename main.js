@@ -1,6 +1,10 @@
 
 var car = {
-  direction: ''
+  direction: '',
+  location: {
+    x: 0,
+    y: 0
+  }
 };
 
 var keyDirection = [
@@ -19,4 +23,13 @@ document.addEventListener('keydown', function (e) {
     }
   }
   $img.className = car.direction;
+
+  if (e.key === ' ') {
+    setInterval(moveCar, 1);
+  }
 });
+
+function moveCar() {
+  car.location.x++;
+  $img.setAttribute('style', 'left: ' + car.location.x + 'px;');
+}

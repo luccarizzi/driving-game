@@ -9,10 +9,12 @@ body {
 
 img {
   width: 100%;
+  position: absolute;
 }
 
 .car-container {
-  width: 15%;
+  width: 10%;
+  position: relative;
 }
 
 .ArrowLeft {
