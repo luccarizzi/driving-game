@@ -16,7 +16,7 @@ var keyDirection = [
 
 var $img = document.querySelector('img');
 var engine = null;
-var startStop = 0;
+var startStop = true;
 
 document.addEventListener('keydown', function (e) {
   for (var i = 0; i < keyDirection.length; i++) {
@@ -26,12 +26,12 @@ document.addEventListener('keydown', function (e) {
   }
   $img.className = car.direction;
   if (e.key === ' ') {
-    if (startStop % 2 === 0) {
+    if (startStop) {
       engine = setInterval(moveCar, 1);
     } else {
       clearInterval(engine);
     }
-    startStop++;
+    startStop = !startStop;
   }
 });
 
