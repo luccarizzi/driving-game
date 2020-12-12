@@ -1,6 +1,6 @@
 
 var car = {
-  direction: '',
+  direction: 'ArrowRight',
   location: {
     x: 0,
     y: 0
@@ -10,8 +10,8 @@ var car = {
 var keyDirection = [
   'ArrowDown',
   'ArrowUp',
-  'ArrowLeft',
-  'ArrowRight'
+  'ArrowRight',
+  'ArrowLeft'
 ];
 
 var $img = document.querySelector('img');
@@ -36,6 +36,18 @@ document.addEventListener('keydown', function (e) {
 });
 
 function moveCar() {
+
+  if (car.direction === "ArrowDown") {
+    console.log("South");
+  } else if (car.direction === "ArrowUp") {
+    console.log("North");
+  } else if (car.direction === "ArrowRight") {
+    console.log("East");
+  } else {
+    console.log("West");
+  }
+
+
   car.location.x++;
   $img.setAttribute('style', 'left: ' + car.location.x + 'px;');
 }
