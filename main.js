@@ -1,4 +1,5 @@
 
+var left = 0;
 var car = {
   direction: '',
   location: {
@@ -25,6 +26,11 @@ document.addEventListener('keydown', function (e) {
   $img.className = car.direction;
 
   if (e.key === ' ') {
-
+    setInterval(moveCar, 4);
   }
 });
+
+function moveCar() {
+  left++;
+  $img.setAttribute('style', 'left: ' + left + 'px;');
+}
