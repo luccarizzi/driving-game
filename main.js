@@ -36,7 +36,6 @@ document.addEventListener('keydown', function (e) {
 });
 
 function moveCar() {
-
   if (car.direction === 'ArrowDown') {
     car.location.y++;
     $img.setAttribute(
@@ -62,7 +61,4 @@ function moveCar() {
       'top: ' + car.location.y + 'px;' +
       'left: ' + car.location.x + 'px;');
   }
-
-  // car.location.x++;
-  // $img.setAttribute('style', 'left: ' + car.location.x + 'px;');
 }
