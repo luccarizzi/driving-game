@@ -1,6 +1,6 @@
 
 var car = {
-  direction: '',
+  direction: 'ArrowRight',
   location: {
     x: 0,
     y: 0
@@ -10,8 +10,8 @@ var car = {
 var keyDirection = [
   'ArrowDown',
   'ArrowUp',
-  'ArrowLeft',
-  'ArrowRight'
+  'ArrowRight',
+  'ArrowLeft'
 ];
 
 var $img = document.querySelector('img');
@@ -36,6 +36,29 @@ document.addEventListener('keydown', function (e) {
 });
 
 function moveCar() {
-  car.location.x++;
-  $img.setAttribute('style', 'left: ' + car.location.x + 'px;');
+  if (car.direction === 'ArrowDown') {
+    car.location.y++;
+    $img.setAttribute(
+      'style',
+      'top: ' + car.location.y + 'px;' +
+      'left: ' + car.location.x + 'px;');
+  } else if (car.direction === 'ArrowUp') {
+    car.location.y--;
+    $img.setAttribute(
+      'style',
+      'top: ' + car.location.y + 'px;' +
+      'left: ' + car.location.x + 'px;');
+  } else if (car.direction === 'ArrowRight') {
+    car.location.x++;
+    $img.setAttribute(
+      'style',
+      'top: ' + car.location.y + 'px;' +
+      'left: ' + car.location.x + 'px;');
+  } else {
+    car.location.x--;
+    $img.setAttribute(
+      'style',
+      'top: ' + car.location.y + 'px;' +
+      'left: ' + car.location.x + 'px;');
+  }
 }
